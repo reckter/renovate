@@ -646,6 +646,21 @@ const staticGroups = {
       },
     ],
   },
+  relay: {
+    description: 'Group all relay updates together',
+    packageRules: [
+      {
+        matchPackageNames: [
+          'relay-test-utils',
+          'relay-runtime',
+          'relay-compiler',
+          'react-relay',
+          'babel-plugin-relay',
+        ],
+        groupName: 'relay packages'
+      }
+    ]
+  },
 };
 
 const config: any = { ...staticGroups };
